@@ -1,5 +1,6 @@
 	/* Color Settings */
 	.menu_svg {
+		font-family:Arial;
 		--menu-circle-color:	black;
 		--menu-text-color:	black;
 		--menu-text-glow-color:	black;
