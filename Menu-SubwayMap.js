@@ -9,7 +9,7 @@ const
 	],
 	//animation Setting
 	s_ani = {
-		offset:3,		//waiting time before start
+		offset:0,		//waiting time before start
 		speed:3,		//speed of transition
 		interval:0.5},	//interval between animation start
 	//big menu Setting
