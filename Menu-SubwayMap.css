@@ -1,23 +1,28 @@
-	/* Color Settings */
+	/* EASY SETTINGS */
 	.menu_svg {
-		font-family:Arial;
-		--menu-circle-color:	black;
-		--menu-text-color:	black;
-		--menu-text-glow-color:	black;
-		--menu-line-color:	#151515;}
+		--menu-circle-color:		black;
+		--menu-text-color:		black;
+		--menu-text-glow-color:		#b3b3b3;
+		--menu-line-color:		black;
+		--menu-circle-thickness-small:	4;
+		--menu-circle-thickness-big:	5;
+		user-select: none;}
 
-
-
-
+	/*ADVANCED SETTINGS*/
 	#menu_big,
 	#menu_small{
-		position: absolute;
 		text-align: center;
-		top: 10px;
-		width: 100%;
-		z-index: 2;}
+		top: 17px;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;}
+
 	#menu_small > .menu_svg > a > text{font-size:20px;}
+
+	svg.menu_svg{height:170px;}
+
 	.menu_svg > a{opacity:0;}
+
 	.menu_svg > a > text{
 		fill:var(--menu-text-color);
 		font-size:26px;
@@ -26,18 +31,36 @@
    -moz-transition: text-shadow 0.6s ease-in-out;
      -o-transition: text-shadow 0.6s ease-in-out;
 	transition: text-shadow 0.6s ease-in-out;}
+
 	.menu_svg > a > circle{
 		animation: slow_reve 0.1s ease-in-out;
 		fill:rgba(0,0,0,0);
 		stroke:var(--menu-circle-color);
-		stroke-width:2;}
+		stroke-width:var(--menu-circle-thickness-small);}
+
 	.menu_svg > rect {fill:var(--menu-line-color);}
+
 	.menu_svg > a > text:hover,
 	.menu_svg > a > circle:hover{cursor:pointer;}
-	.menu_svg > a > text:hover{text-shadow:1px 1px 5px var(--menu-text-glow-color), 1px 1px 5px var(--menu-text-glow-color);}
+
+	.menu_svg > a > text:hover{text-shadow:0 0 5px var(--menu-text-glow-color), 0 0 5px var(--menu-text-glow-color);}
+
 	@keyframes slow_fill {0%{fill:rgba(0,0,0,0)}100%{fill:var(--menu-circle-color)}}
 	@keyframes slow_reve {0%{fill:var(--menu-circle-color)}100%{fill:rgba(0,0,0,0)}}
 	@keyframes slow_show {0%{opacity:0}100%{opacity:1}}
 	@keyframes slow_hide {0%{opacity:1}100%{opacity:0}}
-	@media (min-width: 767px){  .small{visibility: hidden;}}
-	@media (max-width: 768px){  .big{visibility: hidden;}}
+
+	@media (min-width: 767px){
+		.small{
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			visibility: hidden;}
+		
+		.menu_svg > a > circle{stroke-width:var(--menu-circle-thickness-big);}}
+
+	@media (max-width: 768px){
+		.big{	height: 0;
+			width: 0;
+			pointer-events: none;
+			visibility: hidden;}}
