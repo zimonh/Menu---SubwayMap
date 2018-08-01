@@ -1,3 +1,5 @@
+/* by: ZIMONH src: https://github.com/zimonh/Menu-SubwayMap
+License: https://creativecommons.org/licenses/by-nc-sa/4.0/ */
 const
 	//Menu Items
 	menu_items = [
