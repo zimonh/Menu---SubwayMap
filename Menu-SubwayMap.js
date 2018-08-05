@@ -1,4 +1,4 @@
-/* by: ZIMONH src: https://github.com/zimonh/Menu-SubwayMap
+/* by: ZIMONH src: https://github.com/zimonh/Menu-Subway-Map
 License: https://creativecommons.org/licenses/by-nc-sa/4.0/ */
 const
 	//Menu Items
@@ -63,7 +63,7 @@ const
 			offset		= 19.5 - s.rect_height / 2,
 			all		= ``,
 			ani		= ``;
-		
+
 			s.ani_offset   	= s_ani.offset;
 			s.ani_speed    	= s_ani.speed;
 			s.ani_interval 	= s_ani.interval;
@@ -92,7 +92,7 @@ const
 			rect_x		+= s.rect_x;
 			text_x		+= x+s.special_x;
 			text_y		-= y+s.special_y;}
-		
+
 		document.querySelector(s.id).innerHTML = `
 		<svg class="menu_svg" width="${svg_width}" xmlns="http://www.w3.org/2000/svg">${all}</svg><style>${ani}</style>`;},
 
