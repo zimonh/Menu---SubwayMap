@@ -97,7 +97,7 @@ const
 		<svg class="menu_svg" width="${svg_width}" xmlns="http://www.w3.org/2000/svg">${all}</svg><style>${ani}</style>`;},
 
 
-	menu_highlight = e => { document.querySelector('SubwayMap_style').innerHTML = `
+	menu_highlight = e => { document.querySelector('#SubwayMap_style').innerHTML = `
 		<style>
 			.menu_svg > a.${e.className.baseVal} > circle	{animation: slow_fill 0.7s forwards;}
 			.menu_svg > a > circle							{animation: slow_reve 0.3s forwards;}
